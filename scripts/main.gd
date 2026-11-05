@@ -27,3 +27,19 @@ func _ready() -> void:
 			print("First-time setup complete: Default Steam paths written to disk.")
 		else:
 			print("Warning: Could not create the initial default save file.")
+
+
+func _process(_delta: float) -> void:
+	match Global.selected:
+		0:
+			$Background.texture = load("res://assets/backgrounds/main.webp")
+		1:
+			$Background.texture = load("res://assets/backgrounds/chapter_1.png")
+		2:
+			$Background.texture = load("res://assets/backgrounds/chapter_2.png")
+		3:
+			$Background.texture = load("res://assets/backgrounds/chapter_3.png")
+		4:
+			$Background.texture = load("res://assets/backgrounds/chapter_4.png")
+		5:
+			$Background.texture = load("res://assets/backgrounds/chapter_5.png")
