@@ -1,0 +1,129 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctjuneuriprmu"]
+
+[ext_resource type="Script" path="res://saveable_examples/Menu.cs" id="1_owh5w"]
+[ext_resource type="Script" path="res://saveable_examples/PlayerEntity.cs" id="2_one53"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_v5c68"]
+radius = 10.0
+height = 30.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jpte5"]
+
+[node name="Menu" type="Control" node_paths=PackedStringArray("fValueSpin", "iValueSpin", "textEdit")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_owh5w")
+fValueSpin = NodePath("ValuesHBox/ValuesVBox/fValueSpinBox")
+iValueSpin = NodePath("ValuesHBox/ValuesVBox/iValueSpinBox")
+textEdit = NodePath("MarginContainer/TextEdit")
+
+[node name="ValuesHBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 518.5
+offset_top = 100.0
+offset_right = 634.5
+offset_bottom = 177.0
+
+[node name="LabelsVBox" type="VBoxContainer" parent="ValuesHBox"]
+layout_mode = 2
+
+[node name="fValue" type="Label" parent="ValuesHBox/LabelsVBox"]
+layout_mode = 2
+text = "Float Value:"
+
+[node name="iValue" type="Label" parent="ValuesHBox/LabelsVBox"]
+layout_mode = 2
+text = "Int Value:"
+
+[node name="ValuesVBox" type="VBoxContainer" parent="ValuesHBox"]
+layout_mode = 2
+
+[node name="fValueSpinBox" type="SpinBox" parent="ValuesHBox/ValuesVBox"]
+layout_mode = 2
+step = 0.01
+allow_greater = true
+allow_lesser = true
+
+[node name="iValueSpinBox" type="SpinBox" parent="ValuesHBox/ValuesVBox"]
+layout_mode = 2
+rounded = true
+allow_greater = true
+allow_lesser = true
+
+[node name="ButtonsVBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -33.0
+offset_right = 23.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ButtonsVBox"]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="ButtonsVBox/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save Slot 1"
+
+[node name="SaveButton2" type="Button" parent="ButtonsVBox/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save Slot 2"
+
+[node name="SaveButton3" type="Button" parent="ButtonsVBox/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save Slot 3"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ButtonsVBox"]
+layout_mode = 2
+
+[node name="LoadButton" type="Button" parent="ButtonsVBox/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Load Slot 1"
+
+[node name="LoadButton2" type="Button" parent="ButtonsVBox/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Load Slot 2"
+
+[node name="LoadButton3" type="Button" parent="ButtonsVBox/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Load Slot 3"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -902.0
+offset_bottom = -398.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer"]
+layout_mode = 2
+placeholder_text = "Enter text here."
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(500, 500)
+script = ExtResource("2_one53")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D"]
+mesh = SubResource("CapsuleMesh_v5c68")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_jpte5")
