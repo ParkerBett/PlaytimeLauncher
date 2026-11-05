@@ -4,7 +4,7 @@ func _ready() -> void:
 	if Global.disable_splash:
 		get_tree().change_scene_to_file.call_deferred("res://scenes/main.tscn")
 	else:
-		$Video.autoplay = true
+		$Video.paused = false
 
 
 func _on_video_finished() -> void:

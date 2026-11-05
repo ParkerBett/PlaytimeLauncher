@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coraqa465n0m3"
-path="res://.godot/imported/escape_from_playtime.jpg-c87241fc90ade6275973d21746a32683.ctex"
+uid="uid://ccgcmmelcgjfo"
+path="res://.godot/imported/chapter_1.jpg-cc2ae4b5733834b80686ef581613692c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/banners/multiplayer/escape_from_playtime.jpg"
-dest_files=["res://.godot/imported/escape_from_playtime.jpg-c87241fc90ade6275973d21746a32683.ctex"]
+source_file="res://assets/banners/horizontal/chapter_1.jpg"
+dest_files=["res://.godot/imported/chapter_1.jpg-cc2ae4b5733834b80686ef581613692c.ctex"]
 
 [params]
 

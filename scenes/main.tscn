@@ -32,73 +32,97 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Logo" type="TextureRect" parent="." unique_id=1986663607]
-visible = false
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -159.5625
-offset_right = 159.5625
-offset_bottom = 160.0
-grow_horizontal = 2
+anchors_preset = -1
+anchor_left = 0.98700005
+anchor_top = 1.0
+anchor_right = 0.98700005
+anchor_bottom = 1.0
+offset_left = -334.02405
+offset_top = -160.0
+offset_right = -0.024047852
+grow_horizontal = 0
+grow_vertical = 0
 texture = ExtResource("4_tbgi4")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Chapters" type="Control" parent="." unique_id=1509743625]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -554.0
-offset_top = -240.0
-offset_right = 554.0
-offset_bottom = 240.0
-grow_horizontal = 2
+offset_top = -301.0
+offset_right = 293.0
+offset_bottom = 301.0
 grow_vertical = 2
 
 [node name="1" parent="Chapters" unique_id=1381087849 instance=ExtResource("4_jyhfs")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.105000004
-anchor_right = 0.105000004
-offset_left = -116.340004
-offset_right = 115.409996
+anchor_left = 0.0
+anchor_top = 0.09200001
+anchor_right = 0.0
+anchor_bottom = 0.09200001
+offset_left = 0.0
+offset_top = -55.384003
+offset_right = 238.0
+offset_bottom = 55.615997
 grow_horizontal = 1
-game = 1
+grow_vertical = 1
 
-[node name="2" parent="Chapters" unique_id=81801947 instance=ExtResource("4_jyhfs")]
+[node name="2" parent="Chapters" unique_id=150733778 instance=ExtResource("4_jyhfs")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.307
-anchor_right = 0.307
-offset_left = -119.156006
-offset_right = 112.593994
+anchor_left = 0.0
+anchor_top = 0.29500002
+anchor_right = 0.0
+anchor_bottom = 0.29500002
+offset_left = 0.0
+offset_top = -55.59001
+offset_right = 238.0
+offset_bottom = 55.40999
 grow_horizontal = 1
+grow_vertical = 1
 game = 2
 
-[node name="3" parent="Chapters" unique_id=906810309 instance=ExtResource("4_jyhfs")]
+[node name="3" parent="Chapters" unique_id=1353374955 instance=ExtResource("4_jyhfs")]
 layout_mode = 1
-offset_left = -109.96875
-offset_right = 109.96875
+anchors_preset = 4
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_top = -55.5
+offset_right = 238.0
+offset_bottom = 55.5
+grow_horizontal = 1
+game = 3
 
-[node name="4" parent="Chapters" unique_id=2776168 instance=ExtResource("4_jyhfs")]
+[node name="4" parent="Chapters" unique_id=1420524322 instance=ExtResource("4_jyhfs")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.702
-anchor_right = 0.702
-offset_left = -113.78479
-offset_right = 106.15271
+anchor_left = 0.0
+anchor_top = 0.703
+anchor_right = 0.0
+anchor_bottom = 0.703
+offset_left = 0.0
+offset_top = -55.705994
+offset_right = 238.0
+offset_bottom = 55.294006
+grow_horizontal = 1
 game = 4
 
-[node name="5" parent="Chapters" unique_id=1173203205 instance=ExtResource("4_jyhfs")]
+[node name="5" parent="Chapters" unique_id=835769984 instance=ExtResource("4_jyhfs")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.89500004
-anchor_right = 0.89500004
-offset_left = -115.410034
-offset_right = 116.339966
-grow_horizontal = 0
+anchor_left = 0.0
+anchor_top = 0.90800005
+anchor_right = 0.0
+anchor_bottom = 0.90800005
+offset_left = 0.0
+offset_top = -55.616028
+offset_right = 238.0
+offset_bottom = 55.383972
+grow_horizontal = 1
+grow_vertical = 0
 game = 5

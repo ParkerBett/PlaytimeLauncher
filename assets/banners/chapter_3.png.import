@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pjvag4jgerux"
-path="res://.godot/imported/project_playtime.jpg-107de1a14cfa0efd03076e66f27eaca6.ctex"
+uid="uid://dcd5ccbmbtpup"
+path="res://.godot/imported/chapter_3.png-30111ed4ffe50a7a7694f578903ddd93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/banners/multiplayer/project_playtime.jpg"
-dest_files=["res://.godot/imported/project_playtime.jpg-107de1a14cfa0efd03076e66f27eaca6.ctex"]
+source_file="res://assets/banners/chapter_3.png"
+dest_files=["res://.godot/imported/chapter_3.png-30111ed4ffe50a7a7694f578903ddd93.ctex"]
 
 [params]
 
