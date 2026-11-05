@@ -12,6 +12,8 @@ config_version=5
 
 config/name="PlaytimeLauncher"
 run/main_scene="uid://cxbqc6hmceq7w"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="ParkerBett/PlaytimeLauncher"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="uid://cny2gvah6hyry"
 config/windows_native_icon="res://assets/icons/icon.ico"
@@ -19,6 +21,7 @@ config/windows_native_icon="res://assets/icons/icon.ico"
 [autoload]
 
 Global="*uid://dmj5u74sr5fm1"
+Save="*uid://8irt3cl5huy1"
 
 [display]
 
@@ -29,6 +32,10 @@ window/size/minimize_disabled=true
 window/size/maximize_disabled=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/saltmire_save_lite/plugin.cfg")
 
 [physics]
 
