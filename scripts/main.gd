@@ -12,6 +12,8 @@ var poppy_config: Dictionary = {
 
 var config_data = Save.read("poppy_playtime_config")
 
+var in_chapters_section
+
 var transition_tween: Tween
 
 func _ready() -> void:
@@ -64,7 +66,10 @@ func check_executable(path):
 func _process(_delta: float) -> void:
 	match Global.selected:
 		0:
-			transition_texture(load("res://assets/backgrounds/main.webp"), 0.2)
+			if !in_chapters_section:
+				transition_texture(load("res://assets/backgrounds/main.webp"), 0.2)
+			else:
+				return
 		1:
 			transition_texture(load("res://assets/backgrounds/chapter_1.png"), 0.2)
 		2:
@@ -114,3 +119,11 @@ func transition_texture(new_texture: Texture2D, duration: float = 0.4):
 
 	transition_tween.set_parallel(false)
 	transition_tween.tween_callback(old_clone.queue_free)
+
+
+func _on_chapters_mouse_entered() -> void:
+	in_chapters_section = true
+
+
+func _on_chapters_mouse_exited() -> void:
+	in_chapters_section = false

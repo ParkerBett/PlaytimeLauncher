@@ -35,16 +35,24 @@ func _ready() -> void:
 func _on_button_mouse_entered() -> void:
 	$Button.material = null
 	Global.selected = game
+	
+	$Audio.stream = load("res://assets/audio/hover.mp3")
+	$Audio.play()
 
 func _on_button_mouse_exited() -> void:
 	$Button.material = black_white
 	Global.selected = 0
+	
+	$Audio.stream = null
 
 func _on_button_button_up() -> void:
 	$Button.material = null
 
 func _on_button_button_down() -> void:
 	$Button.material = pressed
+	
+	$Audio.stream = load("res://assets/audio/press.mp3")
+	$Audio.play()
 	
 	match game:
 		-1:

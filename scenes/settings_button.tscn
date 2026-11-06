@@ -58,13 +58,13 @@ grow_vertical = 2
 
 [node name="Disable Splash" type="CheckBox" parent="Settings" unique_id=410672432]
 anchors_preset = -1
-anchor_left = 0.22800002
-anchor_top = 0.14
-anchor_right = 0.22800002
-anchor_bottom = 0.14
-offset_left = -88.00001
+anchor_left = 0.224
+anchor_top = 0.1
+anchor_right = 0.224
+anchor_bottom = 0.1
+offset_left = -88.0
 offset_top = -28.0
-offset_right = 87.99999
+offset_right = 88.0
 offset_bottom = 28.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.1692451, 0.16924527, 0.16924572, 1)
@@ -128,50 +128,56 @@ display_mode = 1
 access = 2
 filters = PackedStringArray("ch5_pro-Win64-Shipping.exe", "ch5_pro-Win64-Shipping.exe.exe")
 
+[node name="Label" type="RichTextLabel" parent="Settings" unique_id=1817408777]
+offset_left = 27.0
+offset_top = 90.0
+offset_right = 249.0
+offset_bottom = 128.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "Chapters:"
+
 [node name="Chapters" type="Control" parent="Settings" unique_id=1348915300]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_left = 0.054
+anchor_top = 0.32500002
+anchor_right = 0.5
+anchor_bottom = 0.80200005
+offset_right = -1.0
+offset_bottom = 0.19998169
 
 [node name="Chapter 1" type="Button" parent="Settings/Chapters" unique_id=193380078]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 83.0
-offset_right = 254.0
-offset_bottom = 114.0
+offset_right = 222.0
+offset_bottom = 31.0
 text = "Change Chapter 1 Path"
 
 [node name="Chapter 2" type="Button" parent="Settings/Chapters" unique_id=555090741]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 123.0
-offset_right = 254.0
-offset_bottom = 154.0
+offset_top = 40.0
+offset_right = 222.0
+offset_bottom = 71.0
 text = "Change Chapter 2 Path"
 
 [node name="Chapter 3" type="Button" parent="Settings/Chapters" unique_id=534389675]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 163.0
-offset_right = 254.0
-offset_bottom = 194.0
+offset_top = 80.0
+offset_right = 222.0
+offset_bottom = 111.0
 text = "Change Chapter 3 Path"
 
 [node name="Chapter 4" type="Button" parent="Settings/Chapters" unique_id=203429876]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 203.0
-offset_right = 254.0
-offset_bottom = 234.0
+offset_top = 120.0
+offset_right = 222.0
+offset_bottom = 151.0
 text = "Change Chapter 4 Path"
 
 [node name="Chapter 5" type="Button" parent="Settings/Chapters" unique_id=116303018]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 243.0
-offset_right = 254.0
-offset_bottom = 274.0
+offset_top = 160.0
+offset_right = 222.0
+offset_bottom = 191.0
 text = "Change Chapter 5 Path"
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
