@@ -1,7 +1,7 @@
 extends Control
 
 var poppy_config: Dictionary = {
-	"Chapter 1": "C:/Program Files (x86)/Steam/steamapps/common/Poppy Playtime/WindowsNoEditor/Poppy_Playtime.exe",
+	"Chapter 1": "C:/Program Files (x86)/Steam/steamapps/common/Poppy Playtime/WindowsNoEditor/Poppy_Playtime/Binaries/Win64/Poppy_Playtime-Win64-Shipping.exe",
 	"Chapter 2": "C:/Program Files (x86)/Steam/steamapps/common/Poppy Playtime/WindowsNoEditor/Playtime_Prototype4/Binaries/Win64/Playtime_Prototype4-Win64-Shipping.exe",
 	"Chapter 3": "C:/Program Files (x86)/Steam/steamapps/common/Poppy Playtime/PoppyPlaytime_Chapter3/Playtime_Chapter3/Binaries/Win64/Playtime_Chapter3-Win64-Shipping.exe",
 	"Chapter 4": "C:/Program Files (x86)/Steam/steamapps/common/Poppy Playtime/Playtime_Chapter4/ch4_pro/Binaries/Win64/ch4_pro-Win64-Shipping.exe",
@@ -42,7 +42,7 @@ func _ready() -> void:
 		Global.escape_path = config_data.get("Escape from Playtime", "")
 		Global.project_path = config_data.get("PROJECT: PLAYTIME", "")
 		
-		print("\n--- Individual Configurations Loaded ---")
+		print("/n--- Individual Configurations Loaded ---")
 		if Global.ch1_path != "": print("Ch 1: ", Global.ch1_path, check_executable(Global.ch1_path))
 		if Global.ch2_path != "": print("Ch 2: ", Global.ch2_path, check_executable(Global.ch2_path))
 		if Global.ch3_path != "": print("Ch 3: ", Global.ch3_path, check_executable(Global.ch3_path))

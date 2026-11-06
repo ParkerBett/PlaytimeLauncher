@@ -76,9 +76,117 @@ theme_override_colors/checkbox_unchecked_color = Color(0.5053443, 0.505344, 0.50
 text = "Disable Splash"
 alignment = 1
 
+[node name="Files" type="Node" parent="Settings" unique_id=316690361]
+
+[node name="Chapter 1" type="FileDialog" parent="Settings/Files" unique_id=305232195]
+oversampling_override = 1.0
+title = "Open a File"
+initial_position = 2
+ok_button_text = "Apply"
+file_mode = 0
+display_mode = 1
+access = 2
+filters = PackedStringArray("Poppy_Playtime-Win64-Shipping.exe")
+
+[node name="Chapter 2" type="FileDialog" parent="Settings/Files" unique_id=229864556]
+oversampling_override = 1.0
+title = "Open a File"
+initial_position = 2
+ok_button_text = "Apply"
+file_mode = 0
+display_mode = 1
+access = 2
+filters = PackedStringArray("Playtime_Prototype4-Win64-Shipping.exe", "ch2_pro-Win64-Shipping.exe.exe")
+
+[node name="Chapter 3" type="FileDialog" parent="Settings/Files" unique_id=168419574]
+oversampling_override = 1.0
+title = "Open a File"
+initial_position = 2
+ok_button_text = "Apply"
+file_mode = 0
+display_mode = 1
+access = 2
+filters = PackedStringArray("Playtime_Chapter3-Win64-Shipping.exe", "ch3_pro-Win64-Shipping.exe.exe")
+
+[node name="Chapter 4" type="FileDialog" parent="Settings/Files" unique_id=1414624938]
+oversampling_override = 1.0
+title = "Open a File"
+initial_position = 2
+ok_button_text = "Apply"
+file_mode = 0
+display_mode = 1
+access = 2
+filters = PackedStringArray("ch4_pro-Win64-Shipping.exe", "ch4_pro-Win64-Shipping.exe.exe")
+
+[node name="Chapter 5" type="FileDialog" parent="Settings/Files" unique_id=844713630]
+oversampling_override = 1.0
+title = "Open a File"
+initial_position = 2
+ok_button_text = "Apply"
+file_mode = 0
+display_mode = 1
+access = 2
+filters = PackedStringArray("ch5_pro-Win64-Shipping.exe", "ch5_pro-Win64-Shipping.exe.exe")
+
+[node name="Chapters" type="Control" parent="Settings" unique_id=1348915300]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Chapter 1" type="Button" parent="Settings/Chapters" unique_id=193380078]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 83.0
+offset_right = 254.0
+offset_bottom = 114.0
+text = "Change Chapter 1 Path"
+
+[node name="Chapter 2" type="Button" parent="Settings/Chapters" unique_id=555090741]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 123.0
+offset_right = 254.0
+offset_bottom = 154.0
+text = "Change Chapter 2 Path"
+
+[node name="Chapter 3" type="Button" parent="Settings/Chapters" unique_id=534389675]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 163.0
+offset_right = 254.0
+offset_bottom = 194.0
+text = "Change Chapter 3 Path"
+
+[node name="Chapter 4" type="Button" parent="Settings/Chapters" unique_id=203429876]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 203.0
+offset_right = 254.0
+offset_bottom = 234.0
+text = "Change Chapter 4 Path"
+
+[node name="Chapter 5" type="Button" parent="Settings/Chapters" unique_id=116303018]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 243.0
+offset_right = 254.0
+offset_bottom = 274.0
+text = "Change Chapter 5 Path"
+
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
 [connection signal="close_requested" from="Settings" to="Settings" method="_on_close_requested"]
 [connection signal="toggled" from="Settings/Disable Splash" to="Settings" method="_on_disable_splash_toggled"]
+[connection signal="file_selected" from="Settings/Files/Chapter 1" to="Settings" method="_on_chapter_1_file_selected"]
+[connection signal="file_selected" from="Settings/Files/Chapter 2" to="Settings" method="_on_chapter_2_file_selected"]
+[connection signal="file_selected" from="Settings/Files/Chapter 3" to="Settings" method="_on_chapter_3_file_selected"]
+[connection signal="file_selected" from="Settings/Files/Chapter 4" to="Settings" method="_on_chapter_4_file_selected"]
+[connection signal="file_selected" from="Settings/Files/Chapter 5" to="Settings" method="_on_chapter_5_file_selected"]
+[connection signal="pressed" from="Settings/Chapters/Chapter 1" to="Settings" method="_on_chapter_1_pressed"]
+[connection signal="pressed" from="Settings/Chapters/Chapter 2" to="Settings" method="_on_chapter_2_pressed"]
+[connection signal="pressed" from="Settings/Chapters/Chapter 3" to="Settings" method="_on_chapter_3_pressed"]
+[connection signal="pressed" from="Settings/Chapters/Chapter 4" to="Settings" method="_on_chapter_4_pressed"]
+[connection signal="pressed" from="Settings/Chapters/Chapter 5" to="Settings" method="_on_chapter_5_pressed"]
