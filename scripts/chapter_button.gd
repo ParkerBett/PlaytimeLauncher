@@ -76,14 +76,15 @@ func open_application(executable_path, arguments: PackedStringArray = []):
 	
 	if app_pid > 0:
 		print("Application successfully opened. Process ID: ", app_pid)
-		get_tree().quit()
+		#get_tree().quit()
 	else:
 		print("Failed to open application. Check your file path.")
 
 func _process(_delta: float):
 	if app_pid > 0:
 		if OS.is_process_running(app_pid):
-			pass
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MINIMIZED)
 		else:
 			print("The Application has been Closed.")
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 			app_pid = -1 

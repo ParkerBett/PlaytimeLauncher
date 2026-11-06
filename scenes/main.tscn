@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dcghkyjh3k0h3" path="res://scenes/chapter_button.tscn" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://nkvw1ehvrl5e" path="res://assets/images/playtime_launcher_logo.png" id="4_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://cvhoo4vj21p0" path="res://scenes/exit_button.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://doyu23m4l24th" path="res://scenes/settings_button.tscn" id="7_o6xl0"]
 
 [node name="Main" type="Control" unique_id=327788455]
 layout_mode = 3
@@ -141,3 +142,17 @@ offset_bottom = 55.383972
 grow_horizontal = 1
 grow_vertical = 0
 game = 5
+
+[node name="Exit_Button" parent="." unique_id=46861228 instance=ExtResource("7_o6xl0")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.84200007
+anchor_top = 0.94500005
+anchor_right = 0.84200007
+anchor_bottom = 0.94500005
+offset_left = -28.98407
+offset_top = -29.360046
+offset_right = 30.01593
+offset_bottom = 29.639954
+grow_horizontal = 0
+grow_vertical = 0
