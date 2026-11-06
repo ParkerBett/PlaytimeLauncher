@@ -12,6 +12,8 @@ var poppy_config: Dictionary = {
 
 var config_data = Save.read("poppy_playtime_config")
 
+var transition_tween: Tween
+
 var ch1_path
 var ch2_path
 var ch3_path
@@ -70,14 +72,53 @@ func check_executable(path):
 func _process(_delta: float) -> void:
 	match Global.selected:
 		0:
-			$Background.texture = load("res://assets/backgrounds/main.webp")
+			transition_texture(load("res://assets/backgrounds/main.webp"), 0.2)
 		1:
-			$Background.texture = load("res://assets/backgrounds/chapter_1.png")
+			transition_texture(load("res://assets/backgrounds/chapter_1.png"), 0.2)
 		2:
-			$Background.texture = load("res://assets/backgrounds/chapter_2.png")
+			transition_texture(load("res://assets/backgrounds/chapter_2.png"), 0.2)
 		3:
-			$Background.texture = load("res://assets/backgrounds/chapter_3.png")
+			transition_texture(load("res://assets/backgrounds/chapter_3.png"), 0.2)
 		4:
-			$Background.texture = load("res://assets/backgrounds/chapter_4.png")
+			transition_texture(load("res://assets/backgrounds/chapter_4.png"), 0.2)
 		5:
-			$Background.texture = load("res://assets/backgrounds/chapter_5.png")
+			transition_texture(load("res://assets/backgrounds/chapter_5.png"), 0.2)
+
+
+func transition_texture(new_texture: Texture2D, duration: float = 0.4):
+	if $Background.texture == new_texture:
+		return
+
+	if transition_tween and transition_tween.is_valid():
+		transition_tween.kill()
+
+	for child in get_children():
+		if child.name.begins_with("TempFadeClone_"):
+			child.queue_free()
+
+	var old_clone = TextureRect.new()
+	old_clone.name = "TempFadeClone_" + str(Time.get_ticks_msec())
+	old_clone.texture = $Background.texture
+
+	old_clone.expand_mode = $Background.expand_mode
+	old_clone.stretch_mode = $Background.stretch_mode
+	old_clone.size = $Background.size
+	old_clone.position = $Background.position
+	
+	add_child(old_clone)
+	move_child(old_clone, $Background.get_index())
+
+	$Background.texture = new_texture
+	$Background.modulate.a = 0.0
+
+	transition_tween = create_tween()
+	transition_tween.set_parallel(true) 
+
+	transition_tween.tween_property($Background, "modulate:a", 1.0, duration)\
+		.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+
+	transition_tween.tween_property(old_clone, "modulate:a", 0.0, duration)\
+		.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+
+	transition_tween.set_parallel(false)
+	transition_tween.tween_callback(old_clone.queue_free)
